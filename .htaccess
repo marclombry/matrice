@@ -1,0 +1,57 @@
+RewriteEngine On
+
+RewriteRule ^$ core/app/public/index.php
+RewriteRule ^redirect$ core/app/public/index.php
+RewriteRule ^login$ core/app/src/login.php
+RewriteRule ^deco$ core/app/src/login.php?deco
+RewriteRule ^Matières-premières$ core/app/src/matiere.php
+RewriteRule ^Formules$ core/app/src/formule.php
+RewriteRule ^Articles$ core/app/src/article.php
+RewriteRule ^Packagings$ core/app/src/packaging.php
+RewriteRule ^Paramètres$ core/app/src/parametre.php
+RewriteRule ^register$ core/app/admin/app/register.php
+RewriteRule ^profil$ core/app/src/profil.php
+RewriteRule ^admin$ core/app/admin/app/index.php
+
+RewriteRule ^create$ core/app/admin/app/create.php
+RewriteRule ^create/Matières-premières$ core/app/admin/app/create.rawmaterial.php
+RewriteRule ^create/Formules$ core/app/admin/app/create.formule.php
+RewriteRule ^create/Articles$ core/app/admin/app/create.article.php
+RewriteRule ^create/Packagings$ core/app/admin/app/create.packaging.php
+RewriteRule ^create/Paramètres$ core/app/admin/app/create.parameter.php
+
+RewriteRule ^update$ core/app/admin/app/update.php
+RewriteRule ^update/Matières-premières$ core/app/admin/app/Entity/Rawmaterial/update.php
+RewriteRule ^update/Articles$ core/app/admin/app/Entity/Article/update.php
+RewriteRule ^update/Formules$ core/app/admin/app/Entity/Formule/update.php
+RewriteRule ^update/Packagings$ core/app/admin/app/Entity/Packagings/update.php
+RewriteRule ^update/Paramètres$ core/app/admin/app/Entity/Parameter/update.php
+RewriteRule ^update/rawmaterial/id/([0-9]+)$ core/app/admin/app/request/update.reque
+
+RewriteRule ^delete$ core/app/admin/app/delete.php
+RewriteRule ^delete/register/id/([0-9]+)$ core/app/admin/app/request/delete.request.php?id=$1&module=$2 [QSA,L]
+RewriteRule ^delete/article/id/([0-9]+)$ core/app/admin/app/request/delete.request.php?id=$1&module=$2 [QSA,L]
+RewriteRule ^delete/formule/id/([0-9]+)$ core/app/admin/app/request/delete.request.php?id=$1&module=$2 [QSA,L]
+
+RewriteRule ^delete/Matières-premières$ core/app/admin/app/Entity/Rawmaterial/delete.php
+RewriteRule ^delete/Formules$ core/app/admin/app/Entity/Formule/delete.php
+RewriteRule ^delete/Articles$ core/app/admin/app/Entity/Article/delete.php
+RewriteRule ^delete/Packagings$ core/app/admin/app/Entity/Packagings/delete.php
+RewriteRule ^delete/Paramètres$ core/app/admin/app/Entity/Parameter/delete.php
+RewriteRule ^delete/rawmaterial/id/([0-9]+)$ core/app/admin/app/request/delete.request.php?id=$1&module=$2 [QSA,L]
+RewriteRule ^delete/packaging/id/([0-9]+)$ core/app/admin/app/request/delete.request.php?id=$1&module=$2 [QSA,L]
+RewriteRule ^delete/parameter/id/([0-9]+)$ core/app/admin/app/request/delete.request.php?id=$1&module=$2 [QSA,L]
+RewriteRule ^article/([a-z0-9-]+)-([0-9]+)$ article.php?titre=$1&id=$2
+
+ErrorDocument 400 http://localhost/macata/400.php?erreur=400
+ErrorDocument 401 http://localhost/macata/401.php?erreur=401
+ErrorDocument 402 http://localhost/macata/402.php?erreur=402
+ErrorDocument 403 http://localhost/macata/403.php?erreur=403
+ErrorDocument 404 http://localhost/macata/404.php?erreur=404
+ErrorDocument 405 http://localhost/macata/405.php?erreur=405
+ErrorDocument 500 http://localhost/macata/500.php?erreur=500
+ErrorDocument 501 http://localhost/macata/501.php?erreur=501
+ErrorDocument 502 http://localhost/macata/502.php?erreur=502
+ErrorDocument 503 http://localhost/macata/503.php?erreur=503
+ErrorDocument 504 http://localhost/macata/504.php?erreur=504
+ErrorDocument 505 http://localhost/macata/505.php?erreur=505

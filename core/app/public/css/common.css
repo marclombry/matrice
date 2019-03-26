@@ -1,0 +1,17 @@
+.contentBlock{
+	background-color:#A6CE90; 
+	border:1px solid #e6e6e6;
+	padding: 10px;
+}
+.navbar-inverse{border:#e6e6e6;}
+.glyphicon-remove{color:red;}
+#navbar_header{padding: 10px;}
+.bodyEarth{
+	background: transparent url('../images/earth.jpg') no-repeat fixed;
+	background-size: cover;
+}
+.sailMax{
+	height: 240px;
+	position:absolute;
+	z-index:0;
+}

@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /vendor/
+Disallow: /core/
+Disallow: /404.php
+Disallow: /.git

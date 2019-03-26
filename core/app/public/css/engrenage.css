@@ -1,0 +1,19 @@
+/* this box englob every data */
+.boxContent{}
+/* this style allows to put the display on flex */
+.flexW{display: flex;flex-wrap: wrap;}
+.gridY{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+
+}
+.#info_user{
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+.#info_user_complete{
+  grid-column: 2 / 4;
+  grid-row: 1;
+}
